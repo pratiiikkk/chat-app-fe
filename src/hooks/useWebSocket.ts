@@ -118,7 +118,7 @@ export const useWebSocket = ({ initialState }: UseWebSocketProps) => {
   const connectWebSocket = () => {
     const ws = new WebSocket(WS_URL);
 
-    ws.onopen = (data) => {
+    ws.onopen = () => {
       setChatState((prev) => ({ ...prev, error: null }));
     };
 
