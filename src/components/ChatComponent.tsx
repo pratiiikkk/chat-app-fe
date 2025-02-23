@@ -5,7 +5,7 @@ import { ChatState, Message } from "@/hooks/useWebSocket";
 import { MessageInput } from "./MessageInput";
 import { ScrollArea } from "./ui/scroll-area";
 import { Card, CardContent, CardHeader } from "./ui/card";
-import { Button } from "./ui/button";
+
 
 interface ChatComponentProps {
   chatState: ChatState;
