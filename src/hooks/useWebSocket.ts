@@ -52,7 +52,7 @@ interface ErrorMessage extends BaseWebSocketMessage {
 }
 
 interface ConnectWsMessage extends BaseWebSocketMessage {
-  type: "connected_to_ws";
+  type: "system";
   userId: string;
 }
 
@@ -155,7 +155,7 @@ export const useWebSocket = ({ initialState }: UseWebSocketProps) => {
           error: null,
         }));
         break;
-        case "connected_to_ws":
+        case "system":
           setChatState((prev) => ({
             ...prev,
             currentUserId:data.userId,

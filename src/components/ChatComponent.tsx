@@ -5,6 +5,7 @@ import { ChatState, Message } from "@/hooks/useWebSocket";
 import { MessageInput } from "./MessageInput";
 import { ScrollArea } from "./ui/scroll-area";
 import { Card, CardContent, CardHeader } from "./ui/card";
+import { Button } from "./ui/button";
 
 interface ChatComponentProps {
   chatState: ChatState;
@@ -20,9 +21,9 @@ const ChatHeader = memo(
         </h2>
         
         <div className="flex items-center gap-2">
-          <div>
+          
             {roomId}
-          </div>
+          
           <span
             className={`w-2 h-2 rounded-full ${
               connected ? "bg-green-500" : "bg-red-500"
@@ -57,7 +58,7 @@ export function ChatComponent({
   }, [messages]);
 
   return (
-    <Card className="sm:w-[90%] max-w-screen-lg mx-4 bg-neutral-900/50 backdrop-blur-sm max-md:mx-4 ">
+    <Card className="sm:w-[90%] max-w-screen-lg mx-4 bg-neutral-900/10 backdrop-blur-sm max-md:mx-4 ">
       <ChatHeader usersCount={userCount} connected={connected} roomId={roomId}/>
 
       <CardContent className="p-0 ">
